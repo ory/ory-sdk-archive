@@ -23,7 +23,6 @@ archive:
     - goos: windows
   files:
     -  release/LICENSE
-format: zip
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
@@ -50,15 +49,15 @@ scoop:
     name: ory
     email: hi@ory.sh
 
-nfpm:
-  replacements:
-    amd64: 64-bit
-    386: 32-bit
-    darwin: macOS
-    linux: Linux
-  vendor: Ory Systems GmbH
-  homepage: https://www.ory.sh/
-  maintainer: Ory Systems GmbH <hi@ory.sh>
-  formats:
-  - deb
-  - rpm
+#nfpm:
+#  replacements:
+#    amd64: 64-bit
+#    386: 32-bit
+#    darwin: macOS
+#    linux: Linux
+#  vendor: Ory Systems GmbH
+#  homepage: https://www.ory.sh/
+#  maintainer: Ory Systems GmbH <hi@ory.sh>
+#  formats:
+#  - deb
+#  - rpm
