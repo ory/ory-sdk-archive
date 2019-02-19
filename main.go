@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/aeneasr/ory/cmd"
+import "github.com/ory/ory/cmd"
 
 func main() {
 	cmd.Execute()
