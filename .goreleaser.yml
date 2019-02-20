@@ -23,10 +23,11 @@ builds:
     - 7
   goos:
     - freebsd
-    - plan9
-    - solaris
-    - netbsd
-    - openbsd
+    - linux
+#    - plan9
+#    - solaris
+#    - netbsd
+#    - openbsd
     - windows
     - darwin
 archive:
