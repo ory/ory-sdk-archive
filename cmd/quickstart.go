@@ -57,7 +57,7 @@ Requests to http://localhost:3313/ will be forwarded to your service (http://loc
 
 		fmt.Printf(`Web service located at %s is now protected with authentication and authorization at:
 
-	http://%s:%d/\n
+	http://%s:%d/
 `, args[0], host, port)
 
 		for {
