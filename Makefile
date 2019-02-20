@@ -5,8 +5,8 @@ release-test:
 
 .PHONY: release-dry
 release-dry:
-		GO111MODULE=on goreleaser --skip-publish --rm-dist
+		GO111MODULE=on goreleaser --skip-publish
 
 .PHONY: release
 release:
-		GO111MODULE=on goreleaser --rm-dist
+		GO111MODULE=on goreleaser
