@@ -19,7 +19,7 @@ import (
 	"github.com/ory/x/cmdx"
 	"github.com/ory/x/flagx"
 	"github.com/spf13/cobra"
-	"sync"
+	"time"
 )
 
 // quickstartCommand represents the quickstart command
@@ -60,9 +60,9 @@ Requests to http://localhost:3313/ will be forwarded to your service (http://loc
 	http://%s:%d/\n
 `, args[0], host, port)
 
-		var wg sync.WaitGroup
-		wg.Add(1)
-		wg.Wait()
+		for {
+			time.Sleep(time.Second)
+		}
 	},
 }
 
