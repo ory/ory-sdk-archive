@@ -53,7 +53,7 @@ changelog:
 brew:
   github:
     owner: ory
-    name: recipies
+    name: homebrew-ory
   homepage:  https://www.ory.sh
   commit_author:
     name: ory
@@ -62,7 +62,7 @@ brew:
 scoop:
   bucket:
     owner: ory
-    name: homebrew-ory
+    name: scoop-ory
   homepage:  https://www.ory.sh
   commit_author:
     name: ory
