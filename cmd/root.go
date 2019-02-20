@@ -23,21 +23,21 @@ import (
 	"github.com/spf13/viper"
 )
 
-var cfgFile string
+var (
+	version, commit, date *string
+	cfgFile               string
+)
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "ory",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "Cloud native identity infrastructure",
+}
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	//	Run: func(cmd *cobra.Command, args []string) { },
+func BuildInfo(v, c, d string) {
+	version = &v
+	commit = &c
+	date = &d
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

@@ -69,6 +69,10 @@ scoop:
     name: ory
     email: hi@ory.sh
 
+dockers:
+  - image_templates:
+      - oryd/ory
+
 #nfpm:
 #  replacements:
 #    amd64: 64-bit

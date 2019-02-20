@@ -23,5 +23,6 @@ var (
 )
 
 func main() {
+	cmd.BuildInfo(version, commit, date)
 	cmd.Execute()
 }

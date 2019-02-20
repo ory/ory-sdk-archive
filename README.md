@@ -1,4 +1,4 @@
-brew tap ory/ory-homebrew-tap
+brew tap ory/recipies
 
-scoop bucket add app https://github.com/org/repo.git
-scoop install app
+scoop bucket add ory https://github.com/ory/recipies.git
+scoop install ory
