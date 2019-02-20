@@ -71,4 +71,7 @@ scoop:
 
 dockers:
   - image_templates:
-      - oryd/ory
+    - "oryd/ory:{{ .Tag }}"
+    - "oryd/ory:v{{ .Major }}"
+    - "oryd/ory:v{{ .Major }}.{{ .Minor }}"
+    - "oryd/ory:latest"
