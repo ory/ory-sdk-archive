@@ -55,7 +55,6 @@ brew:
     owner: ory
     name: recipies
   homepage:  https://www.ory.sh
-  folder: homebrew
   commit_author:
     name: ory
     email: hi@ory.sh
