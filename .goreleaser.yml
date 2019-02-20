@@ -62,7 +62,7 @@ brew:
 scoop:
   bucket:
     owner: ory
-    name: recipies
+    name: homebrew-ory
   homepage:  https://www.ory.sh
   commit_author:
     name: ory
