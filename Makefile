@@ -1,4 +1,3 @@
-
 .PHONY: release-test
 release-test:
 		GO111MODULE=on goreleaser --snapshot --skip-publish --rm-dist

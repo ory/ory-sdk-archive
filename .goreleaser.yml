@@ -53,8 +53,9 @@ changelog:
 brew:
   github:
     owner: ory
-    name: ory-homebrew-tap
+    name: recipies
   homepage:  https://www.ory.sh
+  folder: homebrew
   commit_author:
     name: ory
     email: hi@ory.sh
@@ -62,7 +63,7 @@ brew:
 scoop:
   bucket:
     owner: ory
-    name: ory-scoop-bucket
+    name: recipies
   homepage:  https://www.ory.sh
   commit_author:
     name: ory
