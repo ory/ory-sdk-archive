@@ -71,5 +71,5 @@ func init() {
 
 	quickstartCommand.PersistentFlags().StringP("key", "k", "", "The API key generated in the Ory Cloud Console")
 	quickstartCommand.PersistentFlags().IntP("port", "p", 4000, "The port Ory should listen on")
-	quickstartCommand.PersistentFlags().StringP("host", "h", "", "The host Ory should listen on")
+	quickstartCommand.PersistentFlags().String("host", "", "The host Ory should listen on")
 }
