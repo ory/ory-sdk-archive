@@ -16,8 +16,10 @@ package cmd
 
 import (
 	"fmt"
-
+	"github.com/ory/x/cmdx"
+	"github.com/ory/x/flagx"
 	"github.com/spf13/cobra"
+	"sync"
 )
 
 // quickstartCommand represents the quickstart command
@@ -44,11 +46,23 @@ Requests to http://localhost:3313/ will be forwarded to your service (http://loc
 * Accessing http://localhost:3313/foo/bar directly in the browser will redirect the browser to the login screen
   when no valid user session exists.
 * Accessing http://localhost:3313/foo/bar via an API request (e.g. AJAX) will respond with 401 Unauthorized and a JSON
-  containing information how to continue.
-
-`,
+  containing information how to continue.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("quickstart called")
+		cmdx.ExactArgs(cmd, args, 1)
+		port := flagx.MustGetInt(cmd, "port")
+		host := flagx.MustGetString(cmd, "host")
+		if host == "" {
+			host = "localhost"
+		}
+
+		fmt.Printf(`Web service located at %s is now protected with authentication and authorization at:
+
+	http://%s:%d/\n
+`, args[0], host, port)
+
+		var wg sync.WaitGroup
+		wg.Add(1)
+		wg.Wait()
 	},
 }
 
@@ -56,4 +70,6 @@ func init() {
 	rootCmd.AddCommand(quickstartCommand)
 
 	quickstartCommand.PersistentFlags().StringP("key", "k", "", "The API key generated in the Ory Cloud Console")
+	quickstartCommand.PersistentFlags().IntP("port", "p", 4000, "The port Ory should listen on")
+	quickstartCommand.PersistentFlags().StringP("host", "h", "", "The host Ory should listen on")
 }
