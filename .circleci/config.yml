@@ -45,7 +45,7 @@ jobs:
           command: |
             echo 'export GO111MODULE=on' >> $BASH_ENV
             source $BASH_ENV
-      - run: cp ./releaser/LICENSE.txt ./LICENSE.txt
+      - run: cp ./.releaser/LICENSE.txt ./LICENSE.txt
       - run: curl -sL https://git.io/goreleaser | bash
 
 workflows:
