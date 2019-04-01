@@ -1,2 +1,3 @@
 dist/
 LICENSE.txt
+!.releaser/LICENSE.txt
