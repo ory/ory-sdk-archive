@@ -40,7 +40,7 @@ archive:
   - goos: windows
     format: zip
   files:
-    -  release/LICENSE
+    - LICENSE.txt
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
