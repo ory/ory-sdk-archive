@@ -46,7 +46,6 @@ jobs:
             echo 'export GO111MODULE=on' >> $BASH_ENV
             source $BASH_ENV
       - run: curl -sL https://git.io/goreleaser | bash
-      - run: goreleaser
 
 workflows:
   version: 2
