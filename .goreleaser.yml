@@ -73,3 +73,5 @@ dockers:
     - "oryd/ory:v{{ .Major }}"
     - "oryd/ory:v{{ .Major }}.{{ .Minor }}"
     - "oryd/ory:latest"
+    extra_files:
+      - .releaser/LICENSE.txt
