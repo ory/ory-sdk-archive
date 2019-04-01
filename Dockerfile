@@ -1,6 +1,6 @@
 FROM scratch
 
 COPY ory /
-COPY DISTRIBUTION-LICENSE /LICENSE
+COPY ./.releaser/LICENSE.txt /LICENSE.txt
 
 ENTRYPOINT ["/ory"]
