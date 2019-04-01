@@ -38,7 +38,7 @@ jobs:
     working_directory: /go/src/github.com/ory/ory
     steps:
       - checkout
-          - run:
+      - run:
           name: Enable go1.12 modules
           command: |
             echo 'export GO111MODULE=on' >> $BASH_ENV
