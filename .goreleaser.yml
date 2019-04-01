@@ -4,9 +4,9 @@ project_name: ory
 
 before:
   hooks:
-    # you may remove this if you don't use vgo
     - go mod download
     - go mod tidy
+    - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
 builds:
 -
   binary: ory
