@@ -60,7 +60,7 @@ workflows:
               only: /.*/
       - release:
           requires:
-            - build-docker
+            - test
           filters:
             tags:
               only: /.*/
