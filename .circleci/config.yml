@@ -20,7 +20,7 @@ jobs:
   test:
     docker:
       - image: circleci/golang:1.12
-          working_directory: /go/src/github.com/ory/ory
+    working_directory: /go/src/github.com/ory/ory
     steps:
       - run:
           name: Enable go1.12 modules
@@ -35,8 +35,7 @@ jobs:
   release:
     docker:
       - image: circleci/golang:1.12
-          working_directory: /go/src/github.com/ory/ory
-    working_directory: ~/hydra
+    working_directory: /go/src/github.com/ory/ory
     steps:
       - checkout
           - run:
