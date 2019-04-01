@@ -38,6 +38,7 @@ jobs:
     working_directory: /go/src/github.com/ory/ory
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Enable go1.12 modules
           command: |
@@ -61,6 +62,7 @@ workflows:
       - release:
           requires:
             - test
+            - format
           filters:
             tags:
               only: /.*/
